@@ -1,0 +1,14 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: osx-arm64
+# created-by: conda 24.11.2
+folium=0.19.2=pyhd8ed1ab_0
+ipywidgets=8.1.5=pyhd8ed1ab_1
+jupyter=1.1.1=pyhd8ed1ab_1
+matplotlib=3.8.4=py312h1f38498_2
+numpy=1.26.4=py312h7f4fdc5_0
+numpy-base=1.26.4=py312he047099_0
+pandas=2.1.4=py312hd77ebd4_0
+python=3.12.2=hdf0ec26_0_cpython
+sqlalchemy=1.4.54=py312hea69d52_0
+sqlite=3.45.3=h80987f9_0
