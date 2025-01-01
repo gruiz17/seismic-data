@@ -21,8 +21,6 @@ def create_metadata_text(network, station, location, channel, starttime, endtime
 
 def plot_waveforms(waveform, metadata):
     """gets the waveforms for a given event, based on a metadata tuple
-    Note: This actually requires the database to have been created, based on the
-    mseedindex schema.
 
     Args:
         waveform (Stream): waveforms for the event

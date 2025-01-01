@@ -1,9 +1,19 @@
 from obspy.core.inventory import read_inventory
 import folium
-
+import requests
+from io import BytesIO
 
 def create_map():
-    inv = read_inventory('stationxml.xml')
+    """Creates a map of the stations in the CC network
+
+    Returns: folium.Map
+    """
+    url = 'https://service.iris.edu/fdsnws/station/1/query?net=CC&sta=SEP,HOA,SUG&level=station&format=xml&includecomments=true&nodata=404'
+    response = requests.get(url)
+    response.raise_for_status()
+    xml_data = BytesIO(response.content)
+
+    inv = read_inventory(xml_data)
 
     stations = inv[0].stations
     center_lat = sum(sta.latitude for sta in stations) / len(stations)
